@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 // Search pins uasable for endstop-interupts
 // Compile with the same settings you'd use with Marlin.
 
