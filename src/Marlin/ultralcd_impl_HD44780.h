@@ -414,7 +414,7 @@ void lcd_print(char c) { charset_mapper(c); }
   static void logo_lines(const char* const extra) {
     int indent = (LCD_WIDTH - 8 - lcd_strlen_P(extra)) / 2;
     lcd.setCursor(indent, 0); lcd.print('\x00'); lcd_printPGM(PSTR( "------" ));  lcd.print('\x01');
-    lcd.setCursor(indent, 1);                    lcd_printPGM(PSTR("|Orohack|"));  lcd_printPGM(extra);
+    lcd.setCursor(indent, 1);                    lcd_printPGM(PSTR("|3DTops|"));  lcd_printPGM(extra);
     lcd.setCursor(indent, 2); lcd.print('\x02'); lcd_printPGM(PSTR( "------" ));  lcd.print('\x03');
   }
 

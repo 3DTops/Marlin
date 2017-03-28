@@ -94,7 +94,7 @@
 
 #ifdef DEFAULT_WEBSITE_URL
   #undef  WEBSITE_URL
-  #define WEBSITE_URL DEFAULT_WEBSITE_URL
+  #define WEBSITE_URL "www.orohack.com"
 #endif
 
 // Common LCD messages

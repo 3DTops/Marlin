@@ -291,7 +291,7 @@
   #define MSG_REFRESH                         "Refresh"
 #endif
 #ifndef MSG_WATCH
-  #define MSG_WATCH                           "Info screen"
+  #define MSG_WATCH                           "Info control"
 #endif
 #ifndef MSG_PREPARE
   #define MSG_PREPARE                         "Prepare"
@@ -469,7 +469,7 @@
   #define MSG_INFO_MENU                       "About Printer"
 #endif
 #ifndef MSG_INFO_PRINTER_MENU
-  #define MSG_INFO_PRINTER_MENU               "Printer Info"
+  #define MSG_INFO_PRINTER_MENU               "Extruder Info" // Para mostrar en el menu de informacion del extrusor
 #endif
 #ifndef MSG_INFO_STATS_MENU
   #define MSG_INFO_STATS_MENU                 "Printer Stats"
