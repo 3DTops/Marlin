@@ -636,7 +636,9 @@ void kill_screen(const char* lcd_msg) {
     }
     MENU_ITEM(submenu, MSG_CONTROL, lcd_control_menu);
 
-// Sobre esta parte hay que realizar las modificaciones pertinentes para crear nuestro propio menu para la SD
+    
+
+
     #if ENABLED(SDSUPPORT)
       if (card.cardOK) {
         if (card.isFileOpen()) {
