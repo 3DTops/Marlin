@@ -332,6 +332,9 @@
 #ifndef MSG_KILLED
   #define MSG_KILLED                          "KILLED. "
 #endif
+#ifndef MSG_EXTRUDE_MENU
+  #define MSG_EXTRUDE_MENU				      "Extrude"					
+#endif
 #ifndef MSG_STOPPED
   #define MSG_STOPPED                         "STOPPED. "
 #endif

@@ -119,7 +119,7 @@ uint8_t lcdDrawUpdate = LCDVIEW_CLEAR_CALL_REDRAW; // Set when the LCD needs to 
   void lcd_tune_menu();
   void lcd_prepare_menu();
   void lcd_move_menu();
-  void lcd_control_menu();
+  void lcd_control_menu(); // CONTROL
   void lcd_control_temperature_menu();
   void lcd_control_temperature_preheat_material1_settings_menu();
   void lcd_control_temperature_preheat_material2_settings_menu();
@@ -637,7 +637,7 @@ void kill_screen(const char* lcd_msg) {
     MENU_ITEM(submenu, MSG_CONTROL, lcd_control_menu);
 
 
-    // No añadimos el soporte para la tarjeta SD 
+    // No añadimos el soporte para la tarjeta SD
 
     /*#if ENABLED(SDSUPPORT)
       if (card.cardOK) {
@@ -663,6 +663,7 @@ void kill_screen(const char* lcd_msg) {
       }
     #endif //SDSUPPORT
     */
+    MENU_ITEM(submenu, MSG_EXTRUDE_MENU , lcd_control_menu);
 
     #if ENABLED(LCD_INFO_MENU) //Habilitamos este menu para mostrar la informacion basica del extrusor
       MENU_ITEM(submenu, MSG_INFO_MENU, lcd_info_menu);
