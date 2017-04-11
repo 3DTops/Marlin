@@ -636,10 +636,10 @@ void kill_screen(const char* lcd_msg) {
     }
     MENU_ITEM(submenu, MSG_CONTROL, lcd_control_menu);
 
-    
 
+    // No añadimos el soporte para la tarjeta SD 
 
-    #if ENABLED(SDSUPPORT)
+    /*#if ENABLED(SDSUPPORT)
       if (card.cardOK) {
         if (card.isFileOpen()) {
           if (card.sdprinting)
@@ -662,6 +662,7 @@ void kill_screen(const char* lcd_msg) {
         #endif
       }
     #endif //SDSUPPORT
+    */
 
     #if ENABLED(LCD_INFO_MENU) //Habilitamos este menu para mostrar la informacion basica del extrusor
       MENU_ITEM(submenu, MSG_INFO_MENU, lcd_info_menu);
