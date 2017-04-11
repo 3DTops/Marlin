@@ -119,7 +119,9 @@ uint8_t lcdDrawUpdate = LCDVIEW_CLEAR_CALL_REDRAW; // Set when the LCD needs to 
   void lcd_tune_menu();
   void lcd_prepare_menu();
   void lcd_move_menu();
-  void lcd_control_menu(); // CONTROL
+  void lcd_control_menu();
+  void lcd_extrude_menu();
+  void lcd_extrude_experimental();
   void lcd_control_temperature_menu();
   void lcd_control_temperature_preheat_material1_settings_menu();
   void lcd_control_temperature_preheat_material2_settings_menu();
@@ -663,7 +665,7 @@ void kill_screen(const char* lcd_msg) {
       }
     #endif //SDSUPPORT
     */
-    MENU_ITEM(submenu, MSG_EXTRUDE_MENU , lcd_control_menu);
+    MENU_ITEM(submenu, MSG_EXTRUDE_MENU , lcd_extrude_menu);
 
     #if ENABLED(LCD_INFO_MENU) //Habilitamos este menu para mostrar la informacion basica del extrusor
       MENU_ITEM(submenu, MSG_INFO_MENU, lcd_info_menu);
@@ -1572,12 +1574,32 @@ void kill_screen(const char* lcd_msg) {
     END_MENU();
   }
 
+
+
+
+void lcd_extrude_menu(){
+  START_MENU();
+  MENU_BACK(MSG_MAIN);
+  MENU_ITEM(submenu, MSG_EXPERIMENTAL_EXTRUDE , lcd_extrude_experimental);
+
+
+
+  END_MENU();
+
+}
+
+void lcd_extrude_experimental(){
+  START_MENU();
+  MENU_BACK(MSG_EXTRUDE_MENU);
+
+  END_MENU();
+}
+
   /**
    *
    * "Control" submenu
    *
    */
-
   void lcd_control_menu() {
     START_MENU();
     MENU_BACK(MSG_MAIN);

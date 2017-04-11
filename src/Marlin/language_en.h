@@ -335,6 +335,9 @@
 #ifndef MSG_EXTRUDE_MENU
   #define MSG_EXTRUDE_MENU				      "Extrude"					
 #endif
+#ifndef MSG_EXPERIMENTAL_EXTRUDE
+  #define MSG_EXPERIMENTAL_EXTRUDE			  "Experimental"
+#endif
 #ifndef MSG_STOPPED
   #define MSG_STOPPED                         "STOPPED. "
 #endif
