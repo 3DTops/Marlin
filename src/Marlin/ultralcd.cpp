@@ -1581,8 +1581,10 @@ void lcd_extrude_menu(){
   START_MENU();
   MENU_BACK(MSG_MAIN);
   MENU_ITEM(submenu, MSG_EXPERIMENTAL_EXTRUDE , lcd_extrude_experimental);
-
-
+  MENU_ITEM(gcode, MSG_EXTRUDE_PLA, PSTR("M600")); //Posiblemente tengamos que cambiar la funcion usada
+  MENU_ITEM(gcode, MSG_EXTRUDE_ABS, PSTR("M600")); //Posiblemente tambien tengamos que cambiar la funcion
+  MENU_ITEM(gcode, MSG_EXTRUDE_PET, PSTR("M600")); //Cambiar el GCODE usado
+  MENU_ITEM(gcode, MSG_EXTRUDE_HDPE, PSTR("M600")); // Cambiar la funcion
 
   END_MENU();
 
@@ -1591,7 +1593,6 @@ void lcd_extrude_menu(){
 void lcd_extrude_experimental(){
   START_MENU();
   MENU_BACK(MSG_EXTRUDE_MENU);
-
   END_MENU();
 }
 

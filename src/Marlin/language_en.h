@@ -333,7 +333,19 @@
   #define MSG_KILLED                          "KILLED. "
 #endif
 #ifndef MSG_EXTRUDE_MENU
-  #define MSG_EXTRUDE_MENU				      "Extrude"					
+  #define MSG_EXTRUDE_MENU				      "Extrude"
+#endif
+#ifndef MSG_EXTRUDE_PLA
+  #define MSG_EXTRUDE_PLA               "Extrude PLA"
+#endif
+#ifndef MSG_EXTRUDE_ABS
+  #define MSG_EXTRUDE_ABS               "Extrude ABS"
+#endif
+#ifndef MSG_EXTRUDE_PET
+  #define MSG_EXTRUDE_PET               "Extrude PET"
+#endif
+#ifndef MSG_EXTRUDE_HDPE
+  #define MSG_EXTRUDE_HDPE               "Extrude HDPE"
 #endif
 #ifndef MSG_EXPERIMENTAL_EXTRUDE
   #define MSG_EXPERIMENTAL_EXTRUDE			  "Experimental"
