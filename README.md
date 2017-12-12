@@ -12,3 +12,15 @@ Esta idea cobra sentido a partir del fenómeno conocido como tapones solidarios,
 El HPDE es un material con propiedades muy interesantes para la impresión 3D por sus características físicas y su bajo coste con respecto a otros plásticos utilizados actualmente como PLA o ABS. Ya ha sido utilizado con anterioridad para la fabricación de modelos de grandes dimensiones. Sin embargo, también tiene sus inconvenientes, pues el enfriamiento brusco del material suele derivar en deformaciones y en encogimiento del mismo, por lo que su uso resulta complicado para modelos de pequeñas dimensiones en los que se requiera precisión.
 
 Nuestro objetivo es investigar de que forma evitar estos inconvenientes, ya sea mediante la utilización de catalizadores, métodos de polimerización y otros procesos químicos o mediante procesos físicos como enfriamiento por etapas o métodos de presión. Tras obtener un sistema de extrusión eficaz, se desarrollará un extrusor compacto que responda a los resultados encontrados.
+
+## Fase actual de desarrollo
+
+## Herramientas
+
+## Artículos de interés
+
+## Repositorios de interés
+
+## Contribuciones
+
+## Licencia
