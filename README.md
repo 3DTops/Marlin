@@ -17,6 +17,14 @@ Nuestro objetivo es investigar de que forma evitar estos inconvenientes, ya sea 
 
 ## Herramientas
 
+Las herramientas utilizadas durante el desarrollo del proyecto han sido las siguientes:
+
+- [Atom.io](https://atom.io/) -  Editor de código.
+- [Arduino IDE](https://www.arduino.cc/) - Interfaz de programación de dispositivos Arduino.
+- [FreeCAD](https://www.freecadweb.org/) - Programa CAD para diseño 3D.
+
+## Hardware utilizado
+
 ## Artículos de interés
 
 ## Repositorios de interés
