@@ -38,15 +38,19 @@ set vTcl(active_menu_fg) #000000
 # vTcl Code to Load User Fonts
 
 vTcl:font:add_font \
-    "-family {DejaVu Sans} -size 12 -weight bold -slant roman -underline 0 -overstrike 0" \
+    "-family {DejaVu Sans} -size 12 -weight normal -slant roman -underline 0 -overstrike 0" \
     user \
     vTcl:font10
 vTcl:font:add_font \
-    "-family {DejaVu Sans} -size 12 -weight bold -slant roman -underline 1 -overstrike 0" \
+    "-family {DejaVu Sans} -size 12 -weight bold -slant roman -underline 0 -overstrike 0" \
     user \
     vTcl:font11
 vTcl:font:add_font \
-    "-family {DejaVu Sans} -size 12 -weight normal -slant roman -underline 0 -overstrike 0" \
+    "-family {DejaVu Sans} -size 11 -weight normal -slant roman -underline 0 -overstrike 0" \
+    user \
+    vTcl:font12
+vTcl:font:add_font \
+    "-family {DejaVu Sans} -size 12 -weight bold -slant roman -underline 1 -overstrike 0" \
     user \
     vTcl:font9
 #################################
@@ -57,18 +61,6 @@ vTcl:font:add_font \
 if {[info exists vTcl(sourcing)]} {
 
 proc vTcl:project:info {} {
-    set base .top37
-    global vTcl
-    set base $vTcl(btop)
-    if {$base == ""} {
-        set base .top37
-    }
-    namespace eval ::widgets::$base {
-        set dflt,origin 0
-        set runvisible 1
-    }
-    set site_3_0 $base.fra38
-    set site_3_0 $base.fra71
     namespace eval ::widgets_bindings {
         set tagslist _TopLevel
     }
@@ -86,9 +78,9 @@ proc vTcl:project:info {} {
 # GENERATED GUI PROCEDURES
 #
 
-proc vTclWindow.top37 {base} {
+proc vTclWindow.bor0 {base} {
     if {$base == ""} {
-        set base .top37
+        set base .bor0
     }
     if {[winfo exists $base]} {
         wm deiconify $base; return
@@ -100,7 +92,7 @@ proc vTclWindow.top37 {base} {
     vTcl::widgets::core::toplevel::createCmd $top -class Toplevel \
         -background {#ffffff} -highlightcolor black 
     wm focusmodel $top passive
-    wm geometry $top 672x420+398+88
+    wm geometry $top 672x420+376+182
     update
     # set in toplevel.wgt.
     global vTcl
@@ -119,81 +111,81 @@ proc vTclWindow.top37 {base} {
     vTcl:DefineAlias "$top.fra38" "Frame1" vTcl:WidgetProc "Toplevel1" 1
     set site_3_0 $top.fra38
     label $site_3_0.lab56 \
-        -activebackground {#ffffff} -background {#ffffff} \
-        -font $::vTcl(fonts,vTcl:font9,object) -foreground {#000000} \
-        -text {Diámetro eje Y ->} 
+        -activebackground {#ffffff} -activeforeground black \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -foreground {#000000} -highlightcolor black -text {Diámetro eje Y ->} 
     vTcl:DefineAlias "$site_3_0.lab56" "Label1" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab57 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text {Diámetro eje X ->} 
     vTcl:DefineAlias "$site_3_0.lab57" "Label1_2" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab58 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text {Temperatura C1 ->} 
     vTcl:DefineAlias "$site_3_0.lab58" "Label1_3" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab59 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text {Temperatura C2 ->} 
     vTcl:DefineAlias "$site_3_0.lab59" "Label1_4" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab60 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black \
         -text {Velocidad Angular ->} 
     vTcl:DefineAlias "$site_3_0.lab60" "Label1_5" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab61 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black \
         -text {Velocidad de tracción ->} 
     vTcl:DefineAlias "$site_3_0.lab61" "Label1_6" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab63 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
         -foreground {#000000} -highlightcolor black -text Monitorización 
     vTcl:DefineAlias "$site_3_0.lab63" "Label1_5" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab64 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text D_eje_y 
     vTcl:DefineAlias "$site_3_0.lab64" "D_eje_y" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab65 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text D_eje_x 
     vTcl:DefineAlias "$site_3_0.lab65" "D_eje_x" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab66 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Temp_C1 
     vTcl:DefineAlias "$site_3_0.lab66" "Temp_C1" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab67 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Temp_C2 
     vTcl:DefineAlias "$site_3_0.lab67" "Temp_C2" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab68 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Vel_angular 
     vTcl:DefineAlias "$site_3_0.lab68" "Vel_angular" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab69 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Vel_trac 
     vTcl:DefineAlias "$site_3_0.lab69" "Vel_trac" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab70 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text D_eje_y 
     vTcl:DefineAlias "$site_3_0.lab70" "D_eje_y_12" vTcl:WidgetProc "Toplevel1" 1
@@ -239,26 +231,27 @@ proc vTclWindow.top37 {base} {
         -in $site_3_0 -x 435 -y 251 -width 87 -height 23 -anchor nw \
         -bordermode ignore 
     button $top.but40 \
-        -activebackground {#d9d9d9} -background {#d9d9d9} \
-        -foreground {#000000} -highlightcolor black -text Comenzar \
-        -textvariable {Comienza el proceso de extrusión} 
+        -activebackground {#d9d9d9} -activeforeground black \
+        -background {#d9d9d9} -foreground {#000000} -highlightcolor black \
+        -text Comenzar 
     vTcl:DefineAlias "$top.but40" "Button1" vTcl:WidgetProc "Toplevel1" 1
     button $top.but41 \
-        -activebackground {#d9d9d9} -background {#d9d9d9} \
-        -foreground {#000000} -highlightcolor black -text Configuración \
-        -textvariable {Abrir a configuración del dispositivo} 
+        -activebackground {#d9d9d9} -activeforeground black \
+        -background {#d9d9d9} -foreground {#000000} -highlightcolor black \
+        -text Configuración 
     vTcl:DefineAlias "$top.but41" "Button2" vTcl:WidgetProc "Toplevel1" 1
     button $top.but42 \
-        -activebackground {#d9d9d9} -background {#d9d9d9} \
-        -foreground {#000000} -highlightcolor black -text Precalentar \
-        -textvariable {Precalentamiento del extrusor} 
+        -activebackground {#d9d9d9} -activeforeground black \
+        -background {#d9d9d9} -foreground {#000000} -highlightcolor black \
+        -text Precalentar 
     vTcl:DefineAlias "$top.but42" "Button3" vTcl:WidgetProc "Toplevel1" 1
     button $top.but52 \
-        -activebackground {#d9d9d9} -background {#ffffff} -borderwidth 0 \
-        -disabledforeground {#ffffff} -foreground {#000000} \
-        -highlightbackground {#ffffff} -highlightcolor black \
+        -activebackground {#d9d9d9} -activeforeground black \
+        -background {#ffffff} -borderwidth 0 -disabledforeground {#ffffff} \
+        -foreground {#000000} -highlightbackground {#ffffff} \
+        -highlightcolor black \
         -image [vTcl:image:get_image [file join / home ivan Git Proyecto_SARGO GUI Logos SARGO_Pro.png]] \
-        -relief flat -textvariable {Proyecto SARGO} 
+        -relief flat -textvariable Proyecto_SARGO 
     vTcl:DefineAlias "$top.but52" "Button4" vTcl:WidgetProc "Toplevel1" 1
     frame $top.fra71 \
         -borderwidth 2 -relief ridge -background {#ffffff} -height 225 \
@@ -267,80 +260,80 @@ proc vTclWindow.top37 {base} {
     set site_3_0 $top.fra71
     label $site_3_0.lab56 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text {Diámetro medio ->} 
     vTcl:DefineAlias "$site_3_0.lab56" "Label1_14" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab57 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text {Ovalidad ->} 
     vTcl:DefineAlias "$site_3_0.lab57" "Label1_3" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab58 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text {Gradiente Temp ->} 
     vTcl:DefineAlias "$site_3_0.lab58" "Label1_4" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab59 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black \
         -text {Metros filameto ->} 
     vTcl:DefineAlias "$site_3_0.lab59" "Label1_5" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab60 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black \
         -text {Velocidad media ->} 
     vTcl:DefineAlias "$site_3_0.lab60" "Label1_6" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab61 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text {Densidad media ->} 
     vTcl:DefineAlias "$site_3_0.lab61" "Label1_7" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab63 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
         -foreground {#000000} -highlightcolor black -text Estadísticas 
     vTcl:DefineAlias "$site_3_0.lab63" "Label1_6" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab64 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text D_medio 
     vTcl:DefineAlias "$site_3_0.lab64" "D_medio" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab65 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text D_ovalidad 
     vTcl:DefineAlias "$site_3_0.lab65" "D_ovalidad" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab66 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Temp_grad 
     vTcl:DefineAlias "$site_3_0.lab66" "Temp_grad" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab67 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Metros_fil 
     vTcl:DefineAlias "$site_3_0.lab67" "Metros_fil" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab68 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Vel_med 
     vTcl:DefineAlias "$site_3_0.lab68" "Vel_angular_med" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab69 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text Den_media 
     vTcl:DefineAlias "$site_3_0.lab69" "Den_media" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab70 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
         -text D_eje_y 
     vTcl:DefineAlias "$site_3_0.lab70" "Dejey_13" vTcl:WidgetProc "Toplevel1" 1
@@ -387,33 +380,33 @@ proc vTclWindow.top37 {base} {
         -bordermode ignore 
     entry $top.ent72 \
         -background white -font TkFixedFont -foreground {#000000} \
-        -insertbackground black \
-        -textvariable {Introduce la ruta para guardar los parámetros} 
+        -highlightcolor black -insertbackground black \
+        -selectbackground {#c4c4c4} -selectforeground black 
     vTcl:DefineAlias "$top.ent72" "Entry_rutas" vTcl:WidgetProc "Toplevel1" 1
     label $top.lab73 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -text {Fecha: } 
     vTcl:DefineAlias "$top.lab73" "Label1_6" vTcl:WidgetProc "Toplevel1" 1
     label $top.lab74 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font12,object) \
         -foreground {#000000} -highlightcolor black \
         -text {Ubicación de las estadísticas: } 
     vTcl:DefineAlias "$top.lab74" "Label1_7" vTcl:WidgetProc "Toplevel1" 1
     label $top.lab75 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font11,object) \
         -foreground {#000000} -highlightcolor black -text {Hora: } 
     vTcl:DefineAlias "$top.lab75" "Label1_7" vTcl:WidgetProc "Toplevel1" 1
     label $top.lab76 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text 14/08/2018 
     vTcl:DefineAlias "$top.lab76" "Label_fecha" vTcl:WidgetProc "Toplevel1" 1
     label $top.lab77 \
         -activebackground {#ffffff} -activeforeground black \
-        -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
+        -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -text 18:51 
     vTcl:DefineAlias "$top.lab77" "Label_fecha_8" vTcl:WidgetProc "Toplevel1" 1
     ###################
@@ -442,7 +435,7 @@ proc vTclWindow.top37 {base} {
         -in $top -x 20 -y 20 -width 77 -relwidth 0 -height 23 -relheight 0 \
         -anchor nw -bordermode ignore 
     place $top.lab74 \
-        -in $top -x 20 -y 380 -width 247 -relwidth 0 -height 33 -relheight 0 \
+        -in $top -x 20 -y 390 -width 247 -relwidth 0 -height 23 -relheight 0 \
         -anchor nw -bordermode ignore 
     place $top.lab75 \
         -in $top -x 20 -y 40 -width 77 -height 23 -anchor nw \
@@ -483,7 +476,7 @@ if {$vTcl(borrow)} {
 }
 set vTcl(btop) $btop
 Window show .
-Window show .top37 $btop
+Window show .bor0 $btop
 if {$vTcl(borrow)} {
     $btop configure -background plum
 }
