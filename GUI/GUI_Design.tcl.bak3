@@ -268,34 +268,34 @@ proc vTclWindow.top37 {base} {
     label $site_3_0.lab56 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
-        -foreground {#000000} -highlightcolor black -text {Diámetro eje Y ->} 
+        -foreground {#000000} -highlightcolor black -text {Diámetro medio ->} 
     vTcl:DefineAlias "$site_3_0.lab56" "Label1_14" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab57 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
-        -foreground {#000000} -highlightcolor black -text {Diámetro eje X ->} 
+        -foreground {#000000} -highlightcolor black -text {Ovalidad ->} 
     vTcl:DefineAlias "$site_3_0.lab57" "Label1_3" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab58 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
-        -foreground {#000000} -highlightcolor black -text {Temperatura C1 ->} 
+        -foreground {#000000} -highlightcolor black -text {Gradiente Temp ->} 
     vTcl:DefineAlias "$site_3_0.lab58" "Label1_4" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab59 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
-        -foreground {#000000} -highlightcolor black -text {Temperatura C2 ->} 
+        -foreground {#000000} -highlightcolor black \
+        -text {Metros filameto ->} 
     vTcl:DefineAlias "$site_3_0.lab59" "Label1_5" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab60 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
         -foreground {#000000} -highlightcolor black \
-        -text {Velocidad Angular ->} 
+        -text {Velocidad media ->} 
     vTcl:DefineAlias "$site_3_0.lab60" "Label1_6" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab61 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
-        -foreground {#000000} -highlightcolor black \
-        -text {Velocidad de tracción ->} 
+        -foreground {#000000} -highlightcolor black -text {Densidad media ->} 
     vTcl:DefineAlias "$site_3_0.lab61" "Label1_7" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab63 \
         -activebackground {#ffffff} -activeforeground black \
@@ -306,14 +306,14 @@ proc vTclWindow.top37 {base} {
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
-        -text D_eje_y 
-    vTcl:DefineAlias "$site_3_0.lab64" "D_eje_y_7" vTcl:WidgetProc "Toplevel1" 1
+        -text D_medio 
+    vTcl:DefineAlias "$site_3_0.lab64" "D_medio" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab65 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
-        -text D_eje_x 
-    vTcl:DefineAlias "$site_3_0.lab65" "D_eje_x_8" vTcl:WidgetProc "Toplevel1" 1
+        -text D_ovalidad 
+    vTcl:DefineAlias "$site_3_0.lab65" "D_ovalidad" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab66 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
@@ -347,8 +347,8 @@ proc vTclWindow.top37 {base} {
     place $site_3_0.lab56 \
         -in $site_3_0 -x 10 -y 40 -anchor nw -bordermode ignore 
     place $site_3_0.lab57 \
-        -in $site_3_0 -x 10 -y 70 -width 147 -height 23 -anchor nw \
-        -bordermode ignore 
+        -in $site_3_0 -x 10 -y 70 -width 97 -relwidth 0 -height 23 \
+        -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab58 \
         -in $site_3_0 -x 10 -y 100 -width 157 -relwidth 0 -height 23 \
         -relheight 0 -anchor nw -bordermode ignore 
@@ -356,10 +356,10 @@ proc vTclWindow.top37 {base} {
         -in $site_3_0 -x 10 -y 130 -width 157 -relwidth 0 -height 23 \
         -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab60 \
-        -in $site_3_0 -x 10 -y 160 -width 177 -relwidth 0 -height 23 \
+        -in $site_3_0 -x 10 -y 160 -width 167 -relwidth 0 -height 23 \
         -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab61 \
-        -in $site_3_0 -x 10 -y 190 -width 197 -relwidth 0 -height 23 \
+        -in $site_3_0 -x 10 -y 190 -width 157 -relwidth 0 -height 23 \
         -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab63 \
         -in $site_3_0 -x 60 -y 10 -width 157 -height 23 -anchor nw \
@@ -368,8 +368,8 @@ proc vTclWindow.top37 {base} {
         -in $site_3_0 -x 170 -y 40 -width 87 -relwidth 0 -height 23 \
         -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab65 \
-        -in $site_3_0 -x 170 -y 70 -width 87 -height 23 -anchor nw \
-        -bordermode ignore 
+        -in $site_3_0 -x 120 -y 70 -width 97 -relwidth 0 -height 23 \
+        -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab66 \
         -in $site_3_0 -x 180 -y 100 -width 87 -height 23 -anchor nw \
         -bordermode ignore 

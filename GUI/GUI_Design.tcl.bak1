@@ -324,20 +324,20 @@ proc vTclWindow.top37 {base} {
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
-        -text Temp_C2 
-    vTcl:DefineAlias "$site_3_0.lab67" "Temp_C2_10" vTcl:WidgetProc "Toplevel1" 1
+        -text Metros_fil 
+    vTcl:DefineAlias "$site_3_0.lab67" "Metros_fil" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab68 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
-        -text Vel_angular 
-    vTcl:DefineAlias "$site_3_0.lab68" "Vel_angular_11" vTcl:WidgetProc "Toplevel1" 1
+        -text Vel_med 
+    vTcl:DefineAlias "$site_3_0.lab68" "Vel_angular_med" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab69 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
-        -text Vel_trac 
-    vTcl:DefineAlias "$site_3_0.lab69" "Vel_trac_12" vTcl:WidgetProc "Toplevel1" 1
+        -text Den_media 
+    vTcl:DefineAlias "$site_3_0.lab69" "Den_media" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab70 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font9,object) \
@@ -377,11 +377,11 @@ proc vTclWindow.top37 {base} {
         -in $site_3_0 -x 180 -y 130 -width 87 -height 23 -anchor nw \
         -bordermode ignore 
     place $site_3_0.lab68 \
-        -in $site_3_0 -x 190 -y 160 -width 107 -relwidth 0 -height 23 \
+        -in $site_3_0 -x 180 -y 160 -width 97 -relwidth 0 -height 23 \
         -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab69 \
-        -in $site_3_0 -x 210 -y 190 -width 87 -height 23 -anchor nw \
-        -bordermode ignore 
+        -in $site_3_0 -x 180 -y 190 -width 97 -relwidth 0 -height 23 \
+        -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab70 \
         -in $site_3_0 -x 435 -y 251 -width 87 -height 23 -anchor nw \
         -bordermode ignore 

@@ -318,8 +318,8 @@ proc vTclWindow.top37 {base} {
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
         -foreground {#000000} -highlightcolor black -justify left \
-        -text Temp_C1 
-    vTcl:DefineAlias "$site_3_0.lab66" "Temp_C1_9" vTcl:WidgetProc "Toplevel1" 1
+        -text Temp_grad 
+    vTcl:DefineAlias "$site_3_0.lab66" "Temp_grad" vTcl:WidgetProc "Toplevel1" 1
     label $site_3_0.lab67 \
         -activebackground {#ffffff} -activeforeground black \
         -background {#ffffff} -font $::vTcl(fonts,vTcl:font10,object) \
@@ -371,8 +371,8 @@ proc vTclWindow.top37 {base} {
         -in $site_3_0 -x 120 -y 70 -width 97 -relwidth 0 -height 23 \
         -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab66 \
-        -in $site_3_0 -x 180 -y 100 -width 87 -height 23 -anchor nw \
-        -bordermode ignore 
+        -in $site_3_0 -x 180 -y 100 -width 97 -relwidth 0 -height 23 \
+        -relheight 0 -anchor nw -bordermode ignore 
     place $site_3_0.lab67 \
         -in $site_3_0 -x 180 -y 130 -width 87 -height 23 -anchor nw \
         -bordermode ignore 
