@@ -6,56 +6,65 @@
 #    Aug 14, 2018 07:19:28 PM
 
 import sys
+import time
+import random
 
 try:
     from Tkinter import *
 except ImportError:
     from tkinter import *
 
-try:
-    import ttk
-    py3 = False
-except ImportError:
-    import tkinter.ttk as ttk
-    py3 = True
-
+import Tkinter as tk
 import GUI_Design_support
+
 
 def vp_start_gui():
     '''Starting point when module is the main routine.'''
-    global val, w, root
+    global val, w, root, top
     root = Tk()
     GUI_Design_support.set_Tk_var()
-    top = Extrusora_de_pl_stico_3DTops (root)
+    top = App (root)
     GUI_Design_support.init(root, top)
+
+    # Actualizamos la interfaz en general
     root.mainloop()
 
 w = None
-def create_Extrusora_de_pl_stico_3DTops(root, *args, **kwargs):
+def create_App(root, *args, **kwargs):
     '''Starting point when module is imported by another program.'''
     global w, w_win, rt
     rt = root
     w = Toplevel (root)
     GUI_Design_support.set_Tk_var()
-    top = Extrusora_de_pl_stico_3DTops (w)
+    top = App (w)
     GUI_Design_support.init(w, top, *args, **kwargs)
     return (w, top)
 
-def destroy_Extrusora_de_pl_stico_3DTops():
+def destroy_App():
     global w
     w.destroy()
     w = None
 
 
-class Extrusora_de_pl_stico_3DTops:
+# Creamos la aplicación con la interfaz gráfica
+class App:
     def __init__(self, top=None):
+        # Variables de funcionamiento del sistema
+        self.TimerInterval = 1000
+
+        self.diameterAxisY = 0
+
+
+        # Variables referentes a la interfaz gráfica
+        self.top = top
+
         '''This class configures and populates the toplevel window.
            top is the toplevel containing window.'''
         _bgcolor = '#d9d9d9'  # X11 color: 'gray85'
         _fgcolor = '#000000'  # X11 color: 'black'
         _compcolor = '#d9d9d9' # X11 color: 'gray85'
-        _ana1color = '#d9d9d9' # X11 color: 'gray85' 
-        _ana2color = '#d9d9d9' # X11 color: 'gray85' 
+        _ana1color = '#d9d9d9' # X11 color: 'gray85'
+        _ana2color = '#d9d9d9' # X11 color: 'gray85'
         font10 = "-family {DejaVu Sans} -size 12 -weight normal -slant"  \
             " roman -underline 0 -overstrike 0"
         font11 = "-family {DejaVu Sans} -size 12 -weight bold -slant "  \
@@ -69,8 +78,6 @@ class Extrusora_de_pl_stico_3DTops:
         top.title("Extrusora de plástico 3DTops")
         top.configure(background="#ffffff")
         top.configure(highlightcolor="black")
-
-
 
         self.Frame1 = Frame(top)
         self.Frame1.place(relx=0.04, rely=0.26, relheight=0.54, relwidth=0.45)
@@ -207,7 +214,7 @@ class Extrusora_de_pl_stico_3DTops:
         self.Button4.configure(borderwidth="0")
         self.Button4.configure(disabledforeground="#ffffff")
         self.Button4.configure(highlightbackground="#ffffff")
-        self._img1 = PhotoImage(file="./Logos/SARGO_Pro.png")
+        self._img1 = PhotoImage(file="../../GUI/Logos/SARGO_Pro.png")
         self.Button4.configure(image=self._img1)
         self.Button4.configure(relief=FLAT)
         self.Button4.configure(textvariable=GUI_Design_support.Proyecto_SARGO)
@@ -361,20 +368,43 @@ class Extrusora_de_pl_stico_3DTops:
         self.Label_fecha.configure(font=font10)
         self.Label_fecha.configure(text='''14/08/2018''')
 
-        self.Label_fecha_8 = Label(top)
-        self.Label_fecha_8.place(relx=0.13, rely=0.1, height=23, width=127)
-        self.Label_fecha_8.configure(activebackground="#ffffff")
-        self.Label_fecha_8.configure(background="#ffffff")
-        self.Label_fecha_8.configure(font=font10)
-        self.Label_fecha_8.configure(text='''18:51''')
+        self.Label_hora = Label(top)
+        self.Label_hora.place(relx=0.13, rely=0.1, height=23, width=127)
+        self.Label_hora.configure(activebackground="#ffffff")
+        self.Label_hora.configure(background="#ffffff")
+        self.Label_hora.configure(font=font10)
+        self.Label_hora.configure(text='''18:51''')
 
+        # Llamamos a las funciones que serán actualizadas durante la ejecución
+        self.updateClock()
+        self.updateDate()
+        self.updateDiameterAxisY()
 
+    def updateClock(self):
+        # Guardamos la hora actual
+        hora = "%s" %time.strftime("%H:%M:%S")
+        ## Actualizamos el valor del reloj mostrado
+        self.Label_hora.configure(text=hora)
+        # Repetimos la llamada
+        self.top.after(self.TimerInterval,self.updateClock)
 
+    def updateDate(self):
+        # Guardamos la fecha actual
+        fecha = "%s" %time.strftime("%m/%d/%Y")
+        ## Actualizamos el valor del calendario mostrado
+        self.Label_fecha.configure(text=fecha)
+        # Repetimos la llamada
+        self.top.after(self.TimerInterval,self.updateDate)
+
+    def updateDiameterAxisY(self):
+        # Generamos un valor aleatorio para realizar el test
+        self.diameterAxisY = random.randint(1,10)
+        # Actualizamos el valor mostrado
+        self.D_eje_y.configure(text=str(self.diameterAxisY))
+        # Repetimos la llamada a la función
+        self.top.after(self.TimerInterval,self.updateDiameterAxisY)
 
 
 
 if __name__ == '__main__':
     vp_start_gui()
-
-
-
